@@ -10,35 +10,85 @@
   <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
   <title>Common Website Features</title>
 </head>
+
 <body>
   <section class="hero-container">
   <div class="hero-image">
-  <img class="Heroo" src="assets/stuffedanimals.jpg" alt="stuffed animals">
+  <img class="hero" src="assets/stuffedanimals.jpg" alt="stuffed animals">
     <div class="hero-text">
       <h1> Cuddly Critters Corner </h1>
       <h1></h1>
       <h1>  </h1>
       <p>Plush Pals for Every Adventure</p>
-      <button> Get one now!</button>
     </div>
   </div>
   </section>
-  <section class="container content-container">
-    <!-- Remove and add content HTML -->
-    <div class="remove-assignment-content">
-      <h1>Content</h1>
+
+  <section class="content-container">
+    <div class="content">
+      <img class="cont" src="assets/trioanimals.jpg" alt="3 animals" class="left-image" width= "750" height="470">
+      <div class="text">
+      <header> 
+        The Cuddly Bundle Family!
+      </header>
+      <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ducimus illum ad eius, reprehenderit delectus deserunt eaque! Quae facilis dolorum enim magnam. Accusamus exercitationem, distinctio maiores sint alias beatae adipisci. </p>
+      <button> Shop now! </button>
     </div>
   </section>
-  <section class="container accordion-container">
-    <!-- Remove and add accordion HTML -->
-    <div class="remove-assignment-content">
-      <h1>Accordion</h1>
+
+  <section class="accordion-container">
+    <div class="accordion">
+      <h1>Fun Stuffed Animals </h1>
+      <button class="accordion">Sea Animals</button>
+      <div class="panel">
+      <p> Fishy fish, swim swim, water.</p>
+      </div>
+      <button class="accordion">Forest Animals</button>
+      <div class="panel">
+      <p> And she was a fairy...</p>
+      </div>
+      <button class="accordion">Flying Animals </button>
+      <div class="panel">
+      <p> They ain't falling, they be flying. </p>
+      </div>
     </div>
   </section>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+  </script>
+
   <section class="footer-container">
-    <!-- Remove and add footer HTML -->
-    <div class="remove-assignment-content">
+    <div class="footer">
       <h1>Footer</h1>
+      <p>&copy; <span id="year"></span> Kelly Hoang. All rights reserved.</p>
+      <ul>
+        <li><a href>Home</a></li>
+        <li><a href>About Us</a></li>
+        <li><a href>Shop</a></li>
+        <li><a href>Contact Us</a></li>
+      </ul>
+      <div class="footer-map">
+        <iframe src= "https://www.google.com/maps/place/Calgary,+AB/@51.0275915,-114.4174908,10z/data=!3m1!4b1!4m6!3m5!1s0x537170039f843fd5:0x266d3bb1b652b63a!8m2!3d51.0447331!4d-114.0718831!16zL20vMDFyMzI?entry=tturc="
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+      <footer>
+      
+      </footer>
     </div>
   </section>
 </body>
